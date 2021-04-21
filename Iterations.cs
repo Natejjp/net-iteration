@@ -135,10 +135,9 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> sentences)
         {
-            var needle = sentences.First(s => s == "needle");
+            var needle = sentences.First(s => s.Contains("needle"));
             return needle;
         }
-
 
         // 
         // 9) Complete the method FindTheNeedleIndex that accepts a list of
@@ -147,7 +146,7 @@ namespace DotnetIteration
         // 
         public static int FindTheNeedleIndex(List<string> sentences)
         {
-            // var needle = sentences.Where((s,index) => index);
+            var needle = sentences.Where((s, index) => index);
             throw new System.NotImplementedException();
         }
 
