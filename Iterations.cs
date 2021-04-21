@@ -146,8 +146,8 @@ namespace DotnetIteration
         // 
         public static int FindTheNeedleIndex(List<string> sentences)
         {
-            var needle = sentences.Where((s, index) => index);
-            throw new System.NotImplementedException();
+            var needle = sentences.FindIndex(s => s.Contains("needle"));
+            return needle;
         }
 
 
@@ -158,13 +158,6 @@ namespace DotnetIteration
         // 
         public static bool SomeoneToLove(List<string> words)
         {
-            foreach (var index in words)
-            {
-                if (words.Count == 4)
-                {
-                    return true;
-                }
-            }
 
             var love = words.Any(s => s.Length == 4);
             return love;
